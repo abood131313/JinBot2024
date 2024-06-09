@@ -12,6 +12,9 @@
 ### https://www.youtube.com/@JinMoriYT
 ### Remember to subscribe!
 
+![Texto alternativo](https://cdn.discordapp.com/attachments/1200061285816082545/1249422615819456602/Miniaturas.png?ex=66673efc&is=6665ed7c&hm=c9d3cc93e7400e7df8a3f9e0a8f61c7453b988b805a9264a8a888383f4804217&)
+
+
 <br/>
 
 > ### 0: Install English
