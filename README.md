@@ -7,6 +7,11 @@
 ### Este es un bot que funciona 24/7, creado por JinMori
 ### https://www.youtube.com/@JinMoriYT
 ### Recuerda suscribirte!
+////////////////////////////////////////////////////////////////////
+### This is a bot that works 24/7, created by JinMori
+### https://www.youtube.com/@JinMoriYT
+### Remember to subscribe!
+
 <br/>
 
 > ### 0: Install English
@@ -35,9 +40,9 @@
 4. Enter `index.js`, you can change the following:
    
 `const bot = mineflayer.createBot({
-  host: 'ip.aternos.host', // THIS IS THE IP OF YOUR SERVER // SERVER IP
-  username: 'BOTJIN', // HERE GOES THE BOT NAME // BOT NAME
-  port: 29595, // SERVER PORT // SERVER PORT
+  host: 'ip.aternos.host', // THIS IS THE IP OF YOUR SERVER
+  username: 'BOTJIN', // HERE GOES THE BOT NAME
+  port: 29595, // SERVER PORT
   version: '1.16.5',
 })`
  
@@ -101,45 +106,64 @@
 
 <hr/>   
 
-# Preguntas frecuentes ❓
+# Preguntas frecuentes - FAQ ❓
 
 > ### 1: Error `unsupported/unknown protocol version: ###, update minecraft-data`?
 <details><summary>A2:</summary>
 
 Este error puede darse porque no todas las versiones son compatibles con mineflayer.
-A la fecha 17/12/23, el bot es compatible con:
-`- Supports Minecraft 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19 and 1.20.`
+A la fecha 6/24, el bot es compatible con:
+`- Supports Minecraft 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19 and 1.20.4`
 Si tu bot no entra a la version que quieres, puedes probar usando el plugin ViaVersion, el cual hará que tu bot pueda entrar
 en versiones compatibles. Si tu version es antigua, puedes usar ViaVersion Backwards para que funcione. (Testeado en 1.16.5, no requiere
 via version ni backwards.)
 
+This error may occur because not all versions are compatible with mineflayer.
+As of 6/24, the bot is compatible with:
+`- Supports Minecraft 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19 and 1.20.4`
+If your bot does not enter the version you want, you can try using the ViaVersion plugin, which will make your bot enter
+in compatible versions. If your version is old, you can use ViaVersion Backwards to make it work. (Tested in 1.16.5, does not require
+via version or backwards.)
+
 </details>
 
 <hr/>
 
-> ### 2: El bot está baneado?
+> ### 2: El bot está baneado? / Banned bot?
 <details><summary>A3:</summary>
 
 En caso de aternos, tienen un sistema que banea jugadores que han estado `Afk` durante mucho tiempo.
-Puedes desbanearlos manualmente si esto sucede, o cambiar el nombre del bot en la config del replit.
+Puedes desbanearlos manualmente si esto sucede, o cambiar el nombre del bot en la config.
+
+In case others, they have a system that bans players who have been 'Afk' for a long time.
+You can unban them manually if this happens, or change the bot name in the config.
 </details>
 
 <hr/>
 
-> ### 3: Funciona en bedrock?
+> ### 3: Funciona en bedrock? / BEDROCK MCPE?
 <details><summary>A4:</summary>
 
 Sí, funciona perfectamente en Bedrock, pero utilizando GeyserMC, creando un servidor de Java.
 Requerirás el plugin GeyserMC y los plugins de ViaVersion.
 Si no sabes instalar Geyser, hay muchos tutoriales en youtube!
+
+Yes, it works perfectly in Bedrock, but using GeyserMC, creating a Java server.
+You will require the GeyserMC plugin and the ViaVersion plugins.
+If you don't know how to install Geyser, there are many tutorials on YouTube!
+
+https://geysermc.org
+
 </details>
 
 <hr/>
 
-> ### 4: Funciona con mods?
+> ### 4: Funciona con mods? / Works with mods?
 <details><summary>A5:</summary>
 
 A día de hoy, **NO** hay protocolos que funcionen para hacer correr el bot con mods. Ya que es algo externo al minecraft en sí.
+
+It doesn't work with mods sadly.
 </details>
 
 <hr/>
@@ -150,3 +174,9 @@ A día de hoy, **NO** hay protocolos que funcionen para hacer correr el bot con 
 ### No somos responsables de baneos o bugs que puedan generar en hostings como aternos.
 **NO RECOMIENDO USARLO EN TU SERVIDOR PRINCIPAL, USALO EN UNO SECUNDARIO SI QUIERES CONFIGURAR COSAS O CONSTRUIR, ETC**
 **SI TIENES DUDAS O PREGUNTAS, PUEDES ENTRAR A NUESTRO DISCORD CON EL BOTÓN QUE ESTÁ AL PRINCIPIO DE ESTA PÁGINA**
+
+# CAUTION ⚠
+### This bot is developed for entertainment and testing purposes only.
+### We are not responsible for bans or bugs that may occur in hostings such as external ones.
+**I DO NOT RECOMMEND USING IT ON YOUR MAIN SERVER, USE IT ON A SECONDARY SERVER IF YOU WANT TO CONFIGURE THINGS OR BUILD, ETC**
+**IF YOU HAVE DOUBTS OR QUESTIONS, YOU CAN ENTER OUR DISCORD USING THE BUTTON AT THE BEGINNING OF THIS PAGE**
