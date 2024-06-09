@@ -9,8 +9,53 @@
 ### Recuerda suscribirte!
 <br/>
 
+> ### 0: Install English
+<details><summary>0:</summary>
 
-> ### 0: Instalación Español
+# Requirements 📚
+1. An account on BotHosting (To upload the code).  
+	Register at: https://bot-hosting.net/
+
+2. Download this code.
+
+3. Your minecraft server.  
+	Remember to change in the settings: ``online-mode`` and set it to ``false``!  
+	You must also have OP, to place the bots in creative mode
+   	/gamemode creative Bot1
+
+
+
+# Installation ⚙
+1. Create your account at BotHosting and get the 10 free coins.
+
+2. Create your bot in node.js.
+
+3. Wait for the bot server to load, and upload the "index.js" and "package.json" files in the files section.
+
+4. Enter `index.js`, you can change the following:
+   
+`const bot = mineflayer.createBot({
+  host: 'ip.aternos.host', // THIS IS THE IP OF YOUR SERVER // SERVER IP
+  username: 'BOTJIN', // HERE GOES THE BOT NAME // BOT NAME
+  port: 29595, // SERVER PORT // SERVER PORT
+  version: '1.16.5',
+})`
+ 
+ Replace in `ip.aternos` with the IP of your server.
+ In `port` you must change the `25565` for the port of your server, if not, it appears in the main menu of the server,
+ You can replace the `username`, in this case `BOTJIN` with whatever name you want.
+
+ 5. Start the aternos server.
+ 
+ 6. Start your bot and wait for it to load.
+    
+ 7. That's all, enjoy!
+
+</details>
+
+<hr/>
+
+> ### 1: Instalación Español
 <details><summary>1:</summary>
 
 # Requisitos 📚
