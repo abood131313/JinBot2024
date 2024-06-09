@@ -10,6 +10,9 @@
 <br/>
 
 
+> ### 0: Instalación Español
+<details><summary>1:</summary>
+
 # Requisitos 📚
 1. Una cuenta en BotHosting (Para cargar el código).  
 	Registrate en: https://bot-hosting.net/
@@ -42,7 +45,10 @@
  5. Inicia el servidor de aternos.
  6. Inicia tu bot y espera que cargue.
  7. Eso es Todo, disfruta!
-   
+
+</details>
+
+<hr/>   
 
 # Preguntas frecuentes ❓
 
