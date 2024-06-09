@@ -106,6 +106,21 @@
 
 <hr/>   
 
+> ### 00: Commands / Comandos
+<details><summary>00:</summary>
+
+Puedes cambiar el `/register contraseña`, por cualquier comando que consideres útil, sirve para autologear el bot cada vez que entra al servidor,
+puedes cambiarlo por /login una vez que se haya registrado.
+
+You can change the `/register password`, with any command that you consider useful, it serves to autolog the bot every time it enters the server,
+you can change it to /login once you have registered.
+
+`bot.on('spawn', () => {
+  bot.chat('/register contraseña')  
+});`
+
+<hr/>
+
 # Preguntas frecuentes - FAQ ❓
 
 > ### 1: Error `unsupported/unknown protocol version: ###, update minecraft-data`?
