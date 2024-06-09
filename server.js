@@ -18,28 +18,82 @@ app.get('/', (req, res) => {
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Minecraft by Jin</title>
+            <title>Configuración del Bot de Minecraft</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    background-color: #f4f4f4;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                    margin: 0;
+                }
+                .container {
+                    background: #fff;
+                    padding: 20px;
+                    border-radius: 8px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    width: 300px;
+                }
+                h1 {
+                    text-align: center;
+                    color: #333;
+                }
+                label {
+                    display: block;
+                    margin: 10px 0 5px;
+                    color: #555;
+                }
+                input[type="text"], input[type="number"] {
+                    width: 100%;
+                    padding: 8px;
+                    margin-bottom: 10px;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                }
+                button {
+                    width: 100%;
+                    padding: 10px;
+                    background-color: #28a745;
+                    border: none;
+                    border-radius: 4px;
+                    color: #fff;
+                    font-size: 16px;
+                }
+                button:hover {
+                    background-color: #218838;
+                }
+                footer {
+                    text-align: center;
+                    margin-top: 20px;
+                    color: #777;
+                }
+            </style>
         </head>
         <body>
-            <h1>Configuración del Bot de Minecraft</h1>
-            <form id="botConfigForm">
-                <label for="host">Host:</label>
-                <input type="text" id="host" name="host" required><br><br>
+            <div class="container">
+                <h1>Configuración del Bot de Minecraft</h1>
+                <form id="botConfigForm">
+                    <label for="host">Host:</label>
+                    <input type="text" id="host" name="host" required>
 
-                <label for="port">Puerto:</label>
-                <input type="number" id="port" name="port" required><br><br>
+                    <label for="port">Puerto:</label>
+                    <input type="number" id="port" name="port" required>
 
-                <label for="username">Usuario:</label>
-                <input type="text" id="username" name="username" required><br><br>
+                    <label for="username">Usuario:</label>
+                    <input type="text" id="username" name="username" required>
 
-                <label for="password">Contraseña:</label>
-                <input type="password" id="password" name="password"><br><br>
+                    <label for="version">Versión:</label>
+                    <input type="text" id="version" name="version" required>
 
-                <label for="version">Versión:</label>
-                <input type="text" id="version" name="version" required><br><br>
+                    <label for="message">Mensaje de bienvenida:</label>
+                    <input type="text" id="message" name="message">
 
-                <button type="submit">Iniciar Bot</button>
-            </form>
+                    <button type="submit">Iniciar Bot</button>
+                </form>
+                <footer>&copy; 2024 Jin</footer>
+            </div>
 
             <script>
                 document.getElementById('botConfigForm').addEventListener('submit', function(event) {
@@ -48,15 +102,15 @@ app.get('/', (req, res) => {
                     const host = document.getElementById('host').value;
                     const port = document.getElementById('port').value;
                     const username = document.getElementById('username').value;
-                    const password = document.getElementById('password').value;
                     const version = document.getElementById('version').value;
+                    const message = document.getElementById('message').value;
 
                     fetch('/start-bot', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
                         },
-                        body: JSON.stringify({ host, port, username, password, version })
+                        body: JSON.stringify({ host, port, username, version, message })
                     })
                     .then(response => response.json())
                     .then(data => {
@@ -73,22 +127,21 @@ app.get('/', (req, res) => {
 });
 
 app.post('/start-bot', (req, res) => {
-    const { host, port, username, password, version } = req.body;
+    const { host, port, username, version, message } = req.body;
 
     if (bot) {
         bot.end();
     }
 
-    bot = createBot(host, port, username, password, version);
+    bot = createBot(host, port, username, version, message);
     res.json({ message: 'Bot iniciado' });
 });
 
-function createBot(host, port, username, password, version) {
+function createBot(host, port, username, version, message) {
     const newBot = mineflayer.createBot({
         host,
         port: parseInt(port),
         username,
-        password,
         version
     });
 
@@ -98,6 +151,9 @@ function createBot(host, port, username, password, version) {
 
     newBot.on('login', () => {
         console.log('Bot conectado.');
+        if (message) {
+            newBot.chat(message);
+        }
         startTime = Date.now();
         startRandomMovement(newBot);
     });
@@ -108,10 +164,21 @@ function createBot(host, port, username, password, version) {
 
     newBot.on('end', () => {
         console.log('Desconectado, reconectando...');
-        bot = createBot(host, port, username, password, version);
+        reconnectBot(host, port, username, version, message);
+    });
+
+    newBot.on('error', (err) => {
+        console.error('Error del bot:', err);
+        reconnectBot(host, port, username, version, message);
     });
 
     return newBot;
+}
+
+function reconnectBot(host, port, username, version, message) {
+    setTimeout(() => {
+        bot = createBot(host, port, username, version, message);
+    }, 5000); // Espera 5 segundos antes de intentar reconectar
 }
 
 function displayUptime(bot) {
