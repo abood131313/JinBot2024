@@ -28,8 +28,11 @@
 
 # Instalación ⚙
 1. Crea tu cuenta en BotHosting y obtén las 10 monedas gratuitas.
+
 2. Crea tu bot en node.js.
+
 3. Espera a que se cargue el servidor del bot, y sube los archivos "index.js" y "package.json" en la sección files.
+
 4. Entra a `index.js`, podrás cambiar lo siguiente:
    
 `const bot = mineflayer.createBot({
@@ -42,8 +45,11 @@
  Reemplaza en `ip.aternos` por la ip de tu servidor.
  En `port` deberás cambiar el `25565` por el puerto de tu servidor, en caso de aternos, aparece en el menú principal del servidor,
  Puedes reemplazar el `username`, en este caso `BOTJIN` por el nombre que desees.
+
  5. Inicia el servidor de aternos.
+ 
  6. Inicia tu bot y espera que cargue.
+    
  7. Eso es Todo, disfruta!
 
 </details>
