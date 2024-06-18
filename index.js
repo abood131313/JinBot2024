@@ -1,8 +1,8 @@
 const mineflayer = require('mineflayer')
 function createBot () {
 const bot = mineflayer.createBot({
-  host: 'ip.aternos.host', //ACA VA LA IP DE TU SERVIDOR  // SERVER IP
-  username: 'stars_mc.aternos.me', // ACA VA EL NOMBRE DEL BOT  // BOT NAME
+  host: 'stars_mc.aternos.me', //ACA VA LA IP DE TU SERVIDOR  // SERVER IP
+  username: 'star_craft', // ACA VA EL NOMBRE DEL BOT  // BOT NAME
   port: 32499, // PUERTO DEL SERVIDOR // SERVER PORT
   version: '1.16.5',
 })
